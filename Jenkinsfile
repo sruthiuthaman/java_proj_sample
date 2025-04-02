@@ -7,8 +7,9 @@ pipeline{
 
     }
     parameters {
-        string defaultValue: 'production', name: 'server'
-    }
+  choice choices: ['production', 'development'], name: 'servers'
+               }
+
     environment {
         userpasswd = "set%123"
     }
