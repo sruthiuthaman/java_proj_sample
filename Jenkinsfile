@@ -15,7 +15,7 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                echo "This iiiis an build step $params.server"
+                echo "This is an build step $params.server"
                 sh "mvn clean package -DskipTests"
                 }
         }
