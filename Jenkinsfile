@@ -1,9 +1,15 @@
 pipeline{
-    agent none
+    agent{
+        label "node1"
+    }
+    parameters {
+        string defaultValue: 'production', name: 'server'
+    }
+
     stages{
         stage("build"){
             steps{
-                echo "This is an build step"
+                echo "This is an build step $params.server"
                 }
         }
         stage("Test"){
