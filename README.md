@@ -1,6 +1,6 @@
 # java-tomcat-maven-example
 
-g
+test
 
 sample change
 
